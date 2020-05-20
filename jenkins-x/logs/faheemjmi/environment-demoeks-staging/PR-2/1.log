@@ -1,0 +1,40 @@
+
+Showing logs for build [32mfaheemjmi-environment-demoeks-s-6vgr8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-pqgw7[0m
+{"level":"info","ts":1589960169.471229,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1589960169.4716032,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mfaheemjmi-environment-demoeks-s-6vgr8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-hmlxq[0m
+{"level":"info","ts":1589960170.7373397,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1589960170.738298,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mfaheemjmi-environment-demoeks-s-6vgr8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mfaheemjmi-environment-demoeks-s-6vgr8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-faheemjmi-environment-demoeks-s-6vgr8-98l2n[0m
+{"level":"info","ts":1589960191.8051467,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1589960192.2993653,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/environment-demoeks-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mfaheemjmi-environment-demoeks-s-6vgr8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:b4a1949551153cad69a15c79cbe2e2ee792638fd,2:8973975d017ed6a3a3a2256f24968fffe40f080b
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 8973975d017ed6a3a3a2256f24968fffe40f080b: b4a1949551153cad69a15c79cbe2e2ee792638fd:
+DEBUG: ran git fetch --unshallow origin 8973975d017ed6a3a3a2256f24968fffe40f080b: b4a1949551153cad69a15c79cbe2e2ee792638fd: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard b4a1949551153cad69a15c79cbe2e2ee792638fd
+DEBUG: ran git reset --hard b4a1949551153cad69a15c79cbe2e2ee792638fd in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 8973975d017ed6a3a3a2256f24968fffe40f080b
+DEBUG: ran git merge 8973975d017ed6a3a3a2256f24968fffe40f080b in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e b4a1949551153cad69a15c79cbe2e2ee792638fd..HEAD
+Merged SHA 8973975d017ed6a3a3a2256f24968fffe40f080b with commit message 'chore: Promote **demo to version 0.0.2' into base branch master
+
+Showing logs for build [32mfaheemjmi-environment-demoeks-s-6vgr8-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
