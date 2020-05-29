@@ -1,0 +1,40 @@
+
+Showing logs for build [32mfaheemjmi-environment-demoeks-s-rvc4d-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-qgjpt[0m
+{"level":"info","ts":1590763716.8247423,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590763716.8251948,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mfaheemjmi-environment-demoeks-s-rvc4d-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-w4pb6[0m
+{"level":"info","ts":1590763717.8336313,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1590763717.8344448,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mfaheemjmi-environment-demoeks-s-rvc4d-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mfaheemjmi-environment-demoeks-s-rvc4d-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-faheemjmi-environment-demoeks-s-rvc4d-4s24t[0m
+{"level":"info","ts":1590763721.9721174,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590763722.4262564,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/environment-demoeks-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mfaheemjmi-environment-demoeks-s-rvc4d-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:89f0e893c2b8395de9aa4cef1aa16d0850be40e0,5:b08d492a3726d0087d4ddc6ebb69791e1086eae3
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git fetch origin --unshallow b08d492a3726d0087d4ddc6ebb69791e1086eae3: 89f0e893c2b8395de9aa4cef1aa16d0850be40e0:
+DEBUG: ran git fetch --unshallow origin b08d492a3726d0087d4ddc6ebb69791e1086eae3: 89f0e893c2b8395de9aa4cef1aa16d0850be40e0: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 89f0e893c2b8395de9aa4cef1aa16d0850be40e0
+DEBUG: ran git reset --hard 89f0e893c2b8395de9aa4cef1aa16d0850be40e0 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge b08d492a3726d0087d4ddc6ebb69791e1086eae3
+DEBUG: ran git merge b08d492a3726d0087d4ddc6ebb69791e1086eae3 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 89f0e893c2b8395de9aa4cef1aa16d0850be40e0..HEAD
+Merged SHA b08d492a3726d0087d4ddc6ebb69791e1086eae3 with commit message 'The command `** delete application` was run by root and it generated this Pull Request' into base branch master
+
+Showing logs for build [32mfaheemjmi-environment-demoeks-s-rvc4d-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
